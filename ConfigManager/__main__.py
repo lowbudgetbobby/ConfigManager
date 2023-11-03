@@ -1,5 +1,5 @@
 import validators
-from config import write_config, DEFAULT_CONFIG_FILE_PATH
+from config import write, DEFAULT_CONFIG_FILE_PATH
 
 
 config = {
@@ -31,4 +31,4 @@ if __name__ == '__main__':
 
     if do_write:
         print('Writing config to: %s' % DEFAULT_CONFIG_FILE_PATH)
-        write_config(config)
+        write(config)
