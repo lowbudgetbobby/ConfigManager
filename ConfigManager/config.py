@@ -3,7 +3,7 @@ import os
 
 directory = os.path.dirname(os.path.realpath(__file__))
 
-DEFAULT_CONFIG_FILE_PATH = os.path.join(directory, '../config.yaml')
+DEFAULT_CONFIG_FILE_PATH = './config.yaml'
 
 def load_config(file_path=DEFAULT_CONFIG_FILE_PATH):
     config = {}
