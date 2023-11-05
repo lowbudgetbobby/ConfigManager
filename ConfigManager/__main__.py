@@ -1,5 +1,5 @@
-import validators
-from config import write, DEFAULT_CONFIG_FILE_PATH
+from .validators import validate_ip, validate_port
+from .config import write_config, DEFAULT_CONFIG_FILE_PATH
 
 
 config = {
@@ -9,10 +9,10 @@ config = {
     'unity_port': None
 }
 config_validate = {
-    'raspi_ip': validators.validate_ip,
-    'raspi_port': validators.validate_port,
-    'unity_ip': validators.validate_ip,
-    'unity_port': validators.validate_port
+    'raspi_ip': validate_ip,
+    'raspi_port': validate_port,
+    'unity_ip': validate_ip,
+    'unity_port': validate_port
 }
 
 
@@ -31,4 +31,4 @@ if __name__ == '__main__':
 
     if do_write:
         print('Writing config to: %s' % DEFAULT_CONFIG_FILE_PATH)
-        write(config)
+        write_config(config)

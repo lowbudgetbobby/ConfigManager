@@ -5,7 +5,7 @@ directory = os.path.dirname(os.path.realpath(__file__))
 
 DEFAULT_CONFIG_FILE_PATH = os.path.join(directory, '../config.yaml')
 
-def load(file_path=DEFAULT_CONFIG_FILE_PATH):
+def load_config(file_path=DEFAULT_CONFIG_FILE_PATH):
     config = {}
     with open(file_path, "r") as conf_file:
         try:
@@ -15,7 +15,7 @@ def load(file_path=DEFAULT_CONFIG_FILE_PATH):
 
     return config
 
-def write(conf: dict, file_path=DEFAULT_CONFIG_FILE_PATH):
+def write_config(conf: dict, file_path=DEFAULT_CONFIG_FILE_PATH):
     with open(file_path, 'w') as file:
         yaml.dump(conf, file)
 
